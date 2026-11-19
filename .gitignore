@@ -1,15 +1,23 @@
-# Solmaris — High Noon build ignores (rewritten for round 11)
-# Local build output produced by `node main.ts` (MAKEFUN_OUTPUT_DIR=out)
+# Solmaris — High Noon (round 12) — files the entry never ships
+# Written fresh for this round by the round-12 builder.
+
+# Build output from running main.ts locally
 out/
 out1/
 out2/
-# Local scratch the builder uses while testing (never part of the entry)
+output/
+
+# Builder scratch: headless-test drivers, logs, temp captures
 tmp/
 *.log
-# Editor / OS litter
+
+# Editor and OS litter
 .DS_Store
 Thumbs.db
 .vscode/
 *.swp
-# Dependencies (none vendored here; three.js is vendored under game/vendor/)
+*~
+
+# No npm dependencies are vendored in this repo (three.js lives under
+# game/vendor/ and ships with the entry), so node_modules stays out.
 node_modules/
